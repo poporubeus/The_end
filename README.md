@@ -1,4 +1,4 @@
-# The_end
+### The_end
 This is the repository containing my Master thesis's project on QML.
 
 I've started from an existing project where two kinds of quantum circuits (a feature map and the corresponding ansatz) were tested on a Supervised Learning (SL) problem with a customized galaxy dataset used to perform a binary image classification. I've added multiple quantum circuits taken out from different papers, combined together to build several Quantum Neural Networks and I tested their abilities on the binary Supervised Learning (SL) problem, but introducing the MNIST (0-1 digits) in addition to the galaxy dataset.
@@ -9,4 +9,8 @@ The main idea of this project is based on a paper released in 2022 [Generalizati
 # What is QML?
 QML stands for Quantum Machine Learning: a discipline that uses quantum models to develops Machine Learning algorithms specific for an assigned task (Supervised, Unsupervised and Reinforcement Learning) and runs each process on a quantum computer, or a quantum simulator. 
 # Why QML?
-People intensively use QML since it offers a possibility to represent many more functions than a classical computer thanks to the larger computational space (i.e. Hilber space) where do computations ($dim(H) = 2^{n}$).
+People intensively use QML since it offers a possibility to represent many more functions than a classical computer thanks to the larger computational space (i.e. Hilber space) where do computations ($dim(H) = 2^{n}$, where $n$ is the number of qubits). QML exploits superposition and entanglement, two purely quantum effects responsible for representing 2 possible states with only 1 qubit (that substitutes the classical bit in classical computers) and for creating associations between parameters that are passed through qubits.
+Ultimately, with the increasing amount of data that are spred out every day in the current 21th century, we need for computers able to handle plenty of data and information. Quantum computers seem to be the candidates for this task based on what we have explained few lines above.
+# Sad story...disadvantages
+I don't want to go deep into this argument seems I'm strongly convinced of the super-powers of QCs over the CCs, so I need to present my point in the best way possible (lol) without touching too much the disadvantages bounded to it...Anyway, to be serious, the main disadvantages are:
+\item Complexity and Error Correction;
