@@ -33,7 +33,10 @@ The great success of DL in applications is based on the clever idea of construct
 # Back to QUANTUM
 ## QNN models
 QNN models (a.k.a. Quantum Neural Networks) are particular ML models that use the elements of Quantum Computing: qubits and quantum gates.
-The general expression of the fundamental unit of a Quantum Computer, i.e. the qubit, is\\
-$|\Psi \rangle = \alpha |0\rangle + \beta|1\rangle$\\
-and as can be seen, it represents two quantum states at the same time. In this sense, the Schrodinger's cat has a probability ($\alpha$) to be in the state $|0\rangle$ - alive and a probability ($\beta$) to be dead (in the sate ($|1\rangle$).\\
-A quantum gate is a particular operator ($\hat{U}$), i.e. a matrix, that is applied to a state and change it. Have a look at [List of quantum logic gates](https://en.wikipedia.org/wiki/List_of_quantum_logic_gates) to see all the gates we can represent in a Quantum device. These gates are unitary operators $\rightarrow U^{\dagger}U = I$.
+The general expression of the fundamental unit of a Quantum Computer, i.e. the qubit, is
+$|\Psi \rangle = \alpha |0\rangle + \beta|1\rangle$
+and as can be seen, it represents two quantum states at the same time. In this sense, the Schrodinger's cat has a probability ($\alpha$) to be in the state $|0\rangle$ - alive and a probability ($\beta$) to be dead (in the sate ($|1\rangle$).
+A quantum gate is a particular operator ($\hat{U}$), i.e. a matrix, that is applied to a state and change it. Have a look at [List of quantum logic gates](https://en.wikipedia.org/wiki/List_of_quantum_logic_gates) to see all the gates we can represent in a Quantum device. These gates are unitary operators $\rightarrow U^{\dagger}U = I$. A quantum circuits is a set of unitary operations applied to qubits to solve a specific problem.
+The last very important concept we need to introduce before starting is the concept of # measurement.
+Suppose our friend formulates the Schrodinger's cat problem, and he asks this specific question "Where are you sure about the status of the cat?". Our simple correct answer shoul be "In the moment I measure its state!". In other words, for the Schrodinger problem we need to open the box and in order to know if the cat is really dead or alive: this operation we perform on the system (here another important concept i.e. the entanglement between the system and the measurement apparatus, will pop up, but it's a bit behind the simple illustration I want to explain here, so I won't touch it) is the measurement.
+Generally a QNN is composed by two quantum circuits.
