@@ -31,7 +31,8 @@ DL is not a way of learning as I have mentioned before. It's simply a new class 
 The great success of DL in applications is based on the clever idea of constructing sufficiently large nonlinear function spaces throughout the composition of layers of linear and simple nonlinear functions (in the name of activation function). The nonlinearity of a deep network results from the composition of the layers of nonlinear functions. Therefore, the impact of different activation functions on the final performance is likely linked to the model architecture (width and the depth). Apart from this quick introduction to NNs, to understand better what happens inside a NN I suggest [Quantum Neural Netoworks - K.Beer](https://arxiv.org/abs/2205.08154) where the classical part, as the quantum part is really well-explained than I did. I recommend also [Effects of the Nonlinearity in Activation Functions on the Performance of Deep Learning Models](https://arxiv.org/pdf/2010.07359.pdf) to know better the effects of the activation functions.\
 _Here an illustration of the Neural Network architecture_\
 \
-![alt text](https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png=30x30)
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png" width="60" height="40" />
+
 
 
 # Back to QUANTUM
