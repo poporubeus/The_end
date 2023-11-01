@@ -65,6 +65,21 @@ After have annoying with the complex theoretical aspectes of Quantum Mechanics t
 
 ### Again Machine Learning
 We need to clarify other two aspects before diving into ML.
-### Accuracy: number of correct predictions over the total number of predictions;
-### Loss function / Cost: function that is minimized to catch the best variational parameters to make the correct predictions.
+#### Accuracy: number of correct predictions over the total number of predictions;
+#### Loss function - Cost: function that is minimized to catch the best variational parameters to make the correct predictions.
 To summarize, Neural Newtorks and Quantum Neural Networks work in the "same" way: during training they learn the characteristic of data such as images and perform predictions over the train set in order to learn the best parameters that minimize the loss function and, consequently raise up the accuracy. Once the train has been finished, they are ready to generalize new unseen data. Most of the ML algorithms like CNNs (we are going to discuss later) and QNNs use gradient descent based method to minimize the loss. Roughly speaking they compute the gradient of the loss landscape and look for valleys. 
+
+## QNN
+Generally a QNN model is composed by three main parts:
+1) The feature map;
+2) The ansatz;
+3) The classical optimization.\
+### Feature map
+The feature map is the circuit responsible for the representation of the classical data into quantum data, i.e. quantum states.\
+### Ansatz
+The ansatz is the circuit that learn the parameters that undergo to successive optimization.\
+### Classical optimization
+The classical optimization consists into a classical optimizer that compute the cost function and minimize it based on the current learned parameters.\
+### Brief illustration 
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/Screenshot%202023-09-20%20alle%2017.19.30.png" width="600" height="300" />\
