@@ -48,7 +48,14 @@ Suppose our friend formulates the Schrodinger's cat problem, and he asks this sp
 Measuring a qubit translates into the following expression:\
 $\lambda = \langle \psi | \hat{O} | \psi \rangle$ \
 $\lambda$ is the outcome of the measurement process, i.e. the eigenvalue of the operator $\hat{O}$ we have measured. It's obtained by starting from the usual Schrodinger equation, here in a simplified formulation, for the operator we measure: $\hat{O}|\psi\rangle = \lambda|\psi\rangle$ from which we can come back to the previous expression: known also as the expectation value of such operator $\hat{O}$. This measurement outcome is obtained with a certain probability. In fact, coming back to the Schrodinger's problem, if we have the system in the state $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$, and we measure the Pauli $\hat{Z}$ operator with respect to the orthonormal basis ${|0\rangle,|1\rangle}$ we obtain two possible outcomes $\lambda = \pm 1$. Why? We start from the definition of the Pauli $\hat{Z}$ operator that is of this expression $|0\rangle \langle 0| - |1\rangle \langle 1|$, so, by following the Schrodinger's equation I presented above we can conclude that \
+\
 $\hat{Z}|\psi\rangle = (|0\rangle \langle 0| - |1\rangle \langle 1|)|\psi\rangle = \lambda |\psi\rangle$ \
+\
 $|0\rangle \langle 0||\psi\rangle - |1\rangle \langle 1||\psi\rangle = |0\rangle \langle 0|(\alpha |0\rangle + \beta |1\rangle) - |1\rangle \langle 1|(\alpha |0\rangle + \beta |1\rangle)$ \
-We know that all the states are orthonormal, so terms such as $\langle 0||1\rangle$ and viceversa give 0.
+\
+We know that all the states are orthonormal, so terms such as $\langle 0||1\rangle$ and viceversa give 0, rather terms like \langle 0||0\rangle give 1.\
+\
+Ultimately we get $\alpha|0\rangle -\beta|1\rangle.$\
+\
+Now if we set $|\psi\rangle = |0\rangle$ 
 Generally a QNN is composed by two quantum circuits.
