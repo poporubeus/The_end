@@ -30,7 +30,7 @@ Think I want to train a ML engine to play Chess. Whenever it makes a mistake I g
 DL is not a way of learning as I have mentioned before. It's simply a new class of ML models much better and powerful of the pre-existing ones...####why? They are able to introduce the non-linearity within the models. A Neural Network (NN) is an architecture that emulates the way our brain learns from the external world. Entities called neurons incorporate the data (i.e. a vector element $\overrightarrow{x}$), then they pass each element through links assinging statistical weights until a new neuron has reached. In this new node, a function proportional to a sum of the probabilites coming from each link is applied to the data and the process repeats until a new kind of layer called "dense" or "linear" take all the remained data to make the classification. The function contained in each neuron are activiated according to non-linear functions such as ReLU, Sigmoid and other kinds of functions.
 The great success of DL in applications is based on the clever idea of constructing sufficiently large nonlinear function spaces throughout the composition of layers of linear and simple nonlinear functions (in the name of activation function). The nonlinearity of a deep network results from the composition of the layers of nonlinear functions. Therefore, the impact of different activation functions on the final performance is likely linked to the model architecture (width and the depth). Apart from this quick introduction to NNs, to understand better what happens inside a NN I suggest [Quantum Neural Netoworks - K.Beer](https://arxiv.org/abs/2205.08154) where the classical part, as the quantum part is really well-explained than I did. I recommend also [Effects of the Nonlinearity in Activation Functions on the Performance of Deep Learning Models](https://arxiv.org/pdf/2010.07359.pdf) to know better the effects of the activation functions.\
 \
-##Here an illustration of the Neural Network architecture##\
+#Here an illustration of the Neural Network architecture#\
 \
 <img src="https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png" width="700" height="400" />\
 \
@@ -59,9 +59,12 @@ Arrived to this point we can ask which is the probaility of obtaining $\lambda_{
 \
 $\sum_{m}M_{m}^{\dagger}M_{m} = I$\
 \
-we can write $p(\lambda_{0}) = \langle \psi|M_{i}^{\dagger}M_{i}|\psi\rangle$ and the state after the measurement will be collapsed into $|\psi'\rangle = \dfrac{M_{0}|\psi\rangle}{\sqrt{\langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle}}$. The probability of getting the state $|0\rangle$ correspondent to $\lambda_{0}$ is $|\alpha|**2 = \langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle$.\
+we can write $p(\lambda_{0}) = \langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle$ and the state after the measurement will be collapsed into $|\psi'\rangle = \dfrac{M_{0}|\psi\rangle}{\sqrt{\langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle}}$. The probability of getting the state $|0\rangle$ correspondent to $\lambda_{0}$ is $|\alpha|^{2} = \langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle$.\
 \
 After have annoying with the complex theoretical aspectes of Quantum Mechanics that can be recovered in [Quantum Information and Quantum Computation - Niels and Chuang](https://profmcruz.files.wordpress.com/2017/08/quantum-computation-and-quantum-information-nielsen-chuang.pdf), why is the measurement important for QML? Simply because by measuring the qubit and storing the value on a classical but we have access to the variational parameters (angles for classical Q computers) that are used to minimize the loss function. But what is the loss function?\
-\
+
 ### Again Machine Learning
-The 
+We need to clarify other two aspects before diving into ML.
+### Accuracy: number of correct predictions over the total number of predictions;
+### Loss function / Cost: function that is minimized to catch the best variational parameters to make the correct predictions.
+To summarize, Neural Newtorks and Quantum Neural Networks work in the "same" way: during training they learn the characteristic of data such as images and perform predictions over the train set in order to learn the best parameters that minimize the loss function and, consequently raise up the accuracy. Once the train has been finished, they are ready to generalize new unseen data. Most of the ML algorithms like CNNs (we are going to discuss later) and QNNs use gradient descent based method to minimize the loss. Roughly speaking they compute the gradient of the loss landscape and look for valleys. 
