@@ -75,11 +75,18 @@ Generally a QNN model is composed by three main parts:
 2) The ansatz;
 3) The classical optimization.\
 ### Feature map
-The feature map is the circuit responsible for the representation of the classical data into quantum data, i.e. quantum states.\
+The feature map is the circuit responsible for the representation of the classical data into quantum data, i.e. quantum states.
 ### Ansatz
-The ansatz is the circuit that learn the parameters that undergo to successive optimization.\
+The ansatz is the circuit that learn the parameters that undergo to successive optimization.
 ### Classical optimization
 The classical optimization consists into a classical optimizer that compute the cost function and minimize it based on the current learned parameters.\
 ### Brief illustration 
 \
-<img src="https://github.com/poporubeus/The_end/blob/main/Images/Screenshot%202023-09-20%20alle%2017.19.30.png" width="600" height="300" />\
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/Screenshot%202023-09-20%20alle%2017.19.30.png" width="800" height="300" />
+\
+### Circuits
+Here I display the circuits I used as feature map and ansatz. The feature map is composed by 6 qubits to which multiple unitary gates are applied to induce rotations on them. The feature map is composed by 22 layers, so it's repeated that number of time to encode all the 256 features of Mnist and Galaxy images (the images I have used are 16x16 grayscale images), while the ansatz is composed by only 3 layers since is the ciruit that would be simulated and for this reason it cannot be too depth otherwise it generates errors during the process.
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/ringlike_feature_map.jpg" width="800" height="300" />
+
+
