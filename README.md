@@ -83,10 +83,23 @@ The classical optimization consists into a classical optimizer that compute the 
 ### Brief illustration 
 \
 <img src="https://github.com/poporubeus/The_end/blob/main/Images/Screenshot%202023-09-20%20alle%2017.19.30.png" width="800" height="300" />
-\
+
 ### Circuits
 Here I display the circuits I used as feature map and ansatz. The feature map is composed by 6 qubits to which multiple unitary gates are applied to induce rotations on them. The feature map is composed by 22 layers, so it's repeated that number of time to encode all the 256 features of Mnist and Galaxy images (the images I have used are 16x16 grayscale images), while the ansatz is composed by only 3 layers since is the ciruit that would be simulated and for this reason it cannot be too depth otherwise it generates errors during the process.
 \
-<img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/ringlike_feature_map.jpg" width="800" height="300" />
-
-
+\
+### Ring-like circuit
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/ringlike_feature_map.jpg" width="600" height="250" />
+\
+### Waterfall circuit
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/waterfall_feature_map.jpg" width="600" height="250" />
+\
+### CZ circuit
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/hardware_cz.jpg" width="600" height="250" />
+\
+### QCNN circuit
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/qcnn_ansatz.jpg" width="600" height="250" />
