@@ -32,10 +32,8 @@ The great success of DL in applications is based on the clever idea of construct
 \
 ##Here an illustration of the Neural Network architecture##\
 \
-<img src="https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png" width="700" height="400" />
-
-
-
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png" width="700" height="400" />\
+\
 # Back to QUANTUM
 ## QNN models
 QNN models (a.k.a. Quantum Neural Networks) are particular ML models that use the elements of Quantum Computing: qubits and quantum gates.
@@ -45,21 +43,25 @@ and as can be seen, it represents two quantum states at the same time. In this s
 A quantum gate is a particular operator ($\hat{U}$), i.e. a matrix, that is applied to a state and change it. Have a look at [List of quantum logic gates](https://en.wikipedia.org/wiki/List_of_quantum_logic_gates) to see all the gates we can represent in a Quantum device. These gates are unitary operators $\rightarrow U^{\dagger}U = I$. A quantum circuits is a set of unitary operations applied to qubits to solve a specific problem.
 The last very important concept we need to introduce before starting is the concept of # measurement.
 Suppose our friend formulates the Schrodinger's cat problem, and he asks this specific question "Where are you sure about the status of the cat?". Our simple correct answer shoul be "In the moment I measure its state!". In other words, for the Schrodinger problem we need to open the box to know if the cat is really dead or alive: this operation we perform on the system (here another important concept i.e. the entanglement between the system and the measurement apparatus, will pop up, but it's a bit behind the simple illustration I want to explain here, so I won't touch it) is the measurement. \
-Measuring a qubit translates into the following expression:\
-$\lambda = \langle \psi | \hat{O} | \psi \rangle$ \
+Measuring a qubit translates into the following expression: $\lambda = \langle \psi | \hat{O} | \psi \rangle$ \
 $\lambda$ is the outcome of the measurement process, i.e. the eigenvalue of the operator $\hat{O}$ we have measured. It's obtained by starting from the usual Schrodinger equation, here in a simplified formulation, for the operator we measure: $\hat{O}|\psi\rangle = \lambda|\psi\rangle$ from which we can come back to the previous expression: known also as the expectation value of such operator $\hat{O}$. This measurement outcome is obtained with a certain probability. In fact, coming back to the Schrodinger's problem, if we have the system in the state $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$, and we measure the Pauli $\hat{Z}$ operator with respect to the orthonormal basis ${|0\rangle,|1\rangle}$ we obtain two possible outcomes $\lambda = \pm 1$. Why? We start from the definition of the Pauli $\hat{Z}$ operator that is of this expression $|0\rangle \langle 0| - |1\rangle \langle 1|$, so, by following the Schrodinger's equation I presented above we can conclude that \
 \
 $\hat{Z}|\psi\rangle = (|0\rangle \langle 0| - |1\rangle \langle 1|)|\psi\rangle = \lambda |\psi\rangle$ \
 \
-$\lambda = \dfrac{\langle \psi|\hat{Z}|\psi\rangle}{\langle\psi||\psi\rangle}$ \
+$\lambda = \dfrac{\langle\psi|\hat{Z}|\psi\rangle}{\langle\psi||\psi\rangle}$ \
 \
 We know that all the states are orthonormal, so terms such as $\langle 0||1\rangle$ and viceversa give 0, rather terms like \langle 0||0\rangle give 1.\
 \
 If we now set $|\psi\rangle = |0\rangle$ we get $\lambda_{0} = \dfrac{\langle 0|(|0\rangle \langle 0| - |1\rangle \langle 1|)|0\rangle}{\langle\psi||\psi\rangle}$\
-we get $dfrac{\langle 0||0\rangle \langle 0||0\rangle - \langle 0||1\rangle \langle 1||0\rangle}{\langle 0 ||0\rangle}$ that's $\lambda_{0} = 1$. The same is valid when the state is $|1\rangle$ and we obtain $\lambda_{1} = -1$.\
+we get $\dfrac{\langle 0||0\rangle \langle 0||0\rangle - \langle 0||1\rangle \langle 1||0\rangle}{\langle 0 ||0\rangle}$ that's $\lambda_{0} = 1$. The same is valid when the state is $|1\rangle$ and we obtain $\lambda_{1} = -1$.\
 \
 Arrived to this point we can ask which is the probaility of obtaining $\lambda_{0}$ for example. By introducing the measurement operators defined as follows \
 \
 $\sum_{m}M_{m}^{\dagger}M_{m} = I$\
 \
-we can write $p(\lambda_{0}) = \langle \psi|M_{i}^{\dagger}M_{i}|\psi\rangle$ and the state after the measurement will be collapsed into $|\psi'\rangle = \dfrac{M_{0}|\psi\rangle}{\sqrt{\langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle}}$. The probability of getting the state $|0\rangle$ correspondent to $\lambda_{0}$ is $|\alpha|**2 = \langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle$.
+we can write $p(\lambda_{0}) = \langle \psi|M_{i}^{\dagger}M_{i}|\psi\rangle$ and the state after the measurement will be collapsed into $|\psi'\rangle = \dfrac{M_{0}|\psi\rangle}{\sqrt{\langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle}}$. The probability of getting the state $|0\rangle$ correspondent to $\lambda_{0}$ is $|\alpha|**2 = \langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle$.\
+\
+After have annoying with the complex theoretical aspectes of Quantum Mechanics that can be recovered in [Quantum Information and Quantum Computation - Niels and Chuang](https://profmcruz.files.wordpress.com/2017/08/quantum-computation-and-quantum-information-nielsen-chuang.pdf), why is the measurement important for QML? Simply because by measuring the qubit and storing the value on a classical but we have access to the variational parameters (angles for classical Q computers) that are used to minimize the loss function. But what is the loss function?\
+\
+### Again Machine Learning
+The 
