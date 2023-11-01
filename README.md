@@ -51,11 +51,9 @@ $\lambda$ is the outcome of the measurement process, i.e. the eigenvalue of the 
 \
 $\hat{Z}|\psi\rangle = (|0\rangle \langle 0| - |1\rangle \langle 1|)|\psi\rangle = \lambda |\psi\rangle$ \
 \
-$|0\rangle \langle 0||\psi\rangle - |1\rangle \langle 1||\psi\rangle = |0\rangle \langle 0|(\alpha |0\rangle + \beta |1\rangle) - |1\rangle \langle 1|(\alpha |0\rangle + \beta |1\rangle)$ \
+$\lambda = \dfrac{\langle \psi|\hat{Z}|\psi\rangle}{\langle\psi||\psi\rangle}$ \
 \
 We know that all the states are orthonormal, so terms such as $\langle 0||1\rangle$ and viceversa give 0, rather terms like \langle 0||0\rangle give 1.\
 \
-Ultimately we get $\alpha|0\rangle -\beta|1\rangle.$\
-\
-Now if we set $|\psi\rangle = |0\rangle$ 
-Generally a QNN is composed by two quantum circuits.
+If we now set $|\psi\rangle = |0\rangle$ we get $\lambda_{0} = \dfrac{\langle 0|(|0\rangle \langle 0| - |1\rangle \langle 1|)|0\rangle}{\langle\psi||\psi\rangle}$\
+we get $dfrac{\langle 0||0\rangle \langle 0||0\rangle - \langle 0||1\rangle \langle 1||0\rangle}{\langle 0 ||0\rangle}$ that's $\lambda_{0} = 1$. The same is valid when the state is $|1\rangle$ and we obtain $\lambda_{1} = -1$.
