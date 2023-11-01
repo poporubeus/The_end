@@ -56,4 +56,10 @@ $\lambda = \dfrac{\langle \psi|\hat{Z}|\psi\rangle}{\langle\psi||\psi\rangle}$ \
 We know that all the states are orthonormal, so terms such as $\langle 0||1\rangle$ and viceversa give 0, rather terms like \langle 0||0\rangle give 1.\
 \
 If we now set $|\psi\rangle = |0\rangle$ we get $\lambda_{0} = \dfrac{\langle 0|(|0\rangle \langle 0| - |1\rangle \langle 1|)|0\rangle}{\langle\psi||\psi\rangle}$\
-we get $dfrac{\langle 0||0\rangle \langle 0||0\rangle - \langle 0||1\rangle \langle 1||0\rangle}{\langle 0 ||0\rangle}$ that's $\lambda_{0} = 1$. The same is valid when the state is $|1\rangle$ and we obtain $\lambda_{1} = -1$.
+we get $dfrac{\langle 0||0\rangle \langle 0||0\rangle - \langle 0||1\rangle \langle 1||0\rangle}{\langle 0 ||0\rangle}$ that's $\lambda_{0} = 1$. The same is valid when the state is $|1\rangle$ and we obtain $\lambda_{1} = -1$.\
+\
+Arrived to this point we can ask which is the probaility of obtaining $\lambda_{0}$ for example. By introducing the measurement operators defined as follows \
+\
+$\sum_{m}M_{m}^{\dagger}M_{m} = I$\
+\
+we can write $p(\lambda_{0}) = \langle \psi|M_{i}^{\dagger}M_{i}|\psi\rangle$ and the state after the measurement will be collapsed into $|\psi'\rangle = \dfrac{M_{0}|\psi\rangle}{\sqrt{\langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle}}$. The probability of getting the state $|0\rangle$ correspondent to $\lambda_{0}$ is $|\alpha|**2 = \langle \psi|M_{0}^{\dagger}M_{0}|\psi\rangle$.
