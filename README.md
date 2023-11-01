@@ -29,19 +29,23 @@ Think I want to train a ML engine to play Chess. Whenever it makes a mistake I g
 ### Deep Learning (DL)
 DL is not a way of learning as I have mentioned before. It's simply a new class of ML models much better and powerful of the pre-existing ones...####why? They are able to introduce the non-linearity within the models. A Neural Network (NN) is an architecture that emulates the way our brain learns from the external world. Entities called neurons incorporate the data (i.e. a vector element $\overrightarrow{x}$), then they pass each element through links assinging statistical weights until a new neuron has reached. In this new node, a function proportional to a sum of the probabilites coming from each link is applied to the data and the process repeats until a new kind of layer called "dense" or "linear" take all the remained data to make the classification. The function contained in each neuron are activiated according to non-linear functions such as ReLU, Sigmoid and other kinds of functions.
 The great success of DL in applications is based on the clever idea of constructing sufficiently large nonlinear function spaces throughout the composition of layers of linear and simple nonlinear functions (in the name of activation function). The nonlinearity of a deep network results from the composition of the layers of nonlinear functions. Therefore, the impact of different activation functions on the final performance is likely linked to the model architecture (width and the depth). Apart from this quick introduction to NNs, to understand better what happens inside a NN I suggest [Quantum Neural Netoworks - K.Beer](https://arxiv.org/abs/2205.08154) where the classical part, as the quantum part is really well-explained than I did. I recommend also [Effects of the Nonlinearity in Activation Functions on the Performance of Deep Learning Models](https://arxiv.org/pdf/2010.07359.pdf) to know better the effects of the activation functions.\
-_Here an illustration of the Neural Network architecture_\
 \
-<img src="https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png" width="600" height="400" />
+##Here an illustration of the Neural Network architecture##\
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/nn_scheme.png" width="700" height="400" />
 
 
 
 # Back to QUANTUM
 ## QNN models
 QNN models (a.k.a. Quantum Neural Networks) are particular ML models that use the elements of Quantum Computing: qubits and quantum gates.
-The general expression of the fundamental unit of a Quantum Computer, i.e. the qubit, is
-$|\Psi \rangle = \alpha |0\rangle + \beta|1\rangle$
+The general expression of the fundamental unit of a Quantum Computer, i.e. the qubit, is \
+$|\Psi \rangle = \alpha |0\rangle + \beta|1\rangle$ \
 and as can be seen, it represents two quantum states at the same time. In this sense, the Schrodinger's cat has a probability ($\alpha$) to be in the state $|0\rangle$ - alive and a probability ($\beta$) to be dead (in the sate ($|1\rangle$).
 A quantum gate is a particular operator ($\hat{U}$), i.e. a matrix, that is applied to a state and change it. Have a look at [List of quantum logic gates](https://en.wikipedia.org/wiki/List_of_quantum_logic_gates) to see all the gates we can represent in a Quantum device. These gates are unitary operators $\rightarrow U^{\dagger}U = I$. A quantum circuits is a set of unitary operations applied to qubits to solve a specific problem.
 The last very important concept we need to introduce before starting is the concept of # measurement.
-Suppose our friend formulates the Schrodinger's cat problem, and he asks this specific question "Where are you sure about the status of the cat?". Our simple correct answer shoul be "In the moment I measure its state!". In other words, for the Schrodinger problem we need to open the box and in order to know if the cat is really dead or alive: this operation we perform on the system (here another important concept i.e. the entanglement between the system and the measurement apparatus, will pop up, but it's a bit behind the simple illustration I want to explain here, so I won't touch it) is the measurement.
+Suppose our friend formulates the Schrodinger's cat problem, and he asks this specific question "Where are you sure about the status of the cat?". Our simple correct answer shoul be "In the moment I measure its state!". In other words, for the Schrodinger problem we need to open the box to know if the cat is really dead or alive: this operation we perform on the system (here another important concept i.e. the entanglement between the system and the measurement apparatus, will pop up, but it's a bit behind the simple illustration I want to explain here, so I won't touch it) is the measurement. \
+Measuring a qubit translates into the following expression:\
+$\lambda = \langle \psi | \hat{O} | \psi \rangle$ \
+$\lambda$ is the outcome of the measurement process, i.e. the eigenvalue of the operator $\hat{O}$ we have measured. It's obtained by starting from the usual Schrodinger equation, here in a simplified formulation, for the operator we measure: $\hat{O}|\psi\rangle = \lambda|\psi\rangle$ from which we can come back to the previous expression: known also as the expectation value of such operator $\hat{O}$. 
 Generally a QNN is composed by two quantum circuits.
