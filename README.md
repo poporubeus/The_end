@@ -85,21 +85,34 @@ The classical optimization consists into a classical optimizer that compute the 
 <img src="https://github.com/poporubeus/The_end/blob/main/Images/Screenshot%202023-09-20%20alle%2017.19.30.png" width="800" height="300" />
 
 ### Circuits
-Here I display the circuits I used as feature map and ansatz. The feature map is composed by 6 qubits to which multiple unitary gates are applied to induce rotations on them. The feature map is composed by 22 layers, so it's repeated that number of time to encode all the 256 features of Mnist and Galaxy images (the images I have used are 16x16 grayscale images), while the ansatz is composed by only 3 layers since is the ciruit that would be simulated and for this reason it cannot be too depth otherwise it generates errors during the process.
-\
-\
+Here I display the circuits I used as feature map and ansatz. The feature map is composed by 6 qubits to which multiple unitary gates are applied to induce rotations on them. The feature map is composed by 22 layers, so it's repeated that number of time to encode all the 256 features of Mnist and Galaxy images (the images I have used are 16x16 grayscale images), while the ansatz is composed by only 3 layers since is the ciruit that would be simulated and for this reason it cannot be too depth otherwise it generates errors during the process. I decided yo show only the ansatz circuits since are the shallower ones so it's easy to visualize.
+
 ### Ring-like circuit
 \
 <img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/ringlike_feature_map.jpg" width="600" height="250" />
-\
+
 ### Waterfall circuit
 \
 <img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/waterfall_feature_map.jpg" width="600" height="250" />
-\
+
 ### CZ circuit
 \
 <img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/hardware_cz.jpg" width="600" height="250" />
-\
+
 ### QCNN circuit
 \
 <img src="https://github.com/poporubeus/The_end/blob/main/Circuits_imgs/qcnn_ansatz.jpg" width="600" height="250" />
+
+The ring-like and the waterfall circuits are used either as feature map, all the others as ansatz. I composed many QNN architectures by combining all the circuits together, for example I used the ringlike and the waterfall combined with the CZ circuit and so on...
+
+### Technical details and Frameworks
+I've used Qiskit as the quantum interface combined with PyTorch and Tensorflow for downloading the dataset and making the classification.
+As I said, Mnist dataset with {0,1} digits and a custom galaxy dataset reduced to 256 features are used to test the different models. I used the LBFGS optimizer furnished by PyTorch with only 20 epoches since it requires some time to end the process. Subsequently I made a simple and fair CNN constituted by only 36 optimizing parameters, 1 convolutional layer and 1 pooling to make a direct comparison between the quantum and classical part. 
+
+### Experiments
+1) From less data to accuracy: The first experiment consists in training each QNN model with less images to see the generalization performance's trend when the train set is considerably enlarged. I have challenged the models by considering very few images like 6, 10, 20, 30, 40 and 50. I set 5 different seeds to make 5 different runs for each train set with always different and non-repeated images in each run, to have an average behaviour of each process. Unfortunaly, as I was expecting, the CNN reached the best performances on the test set rather than each QNN model which met several difficulties during training.
+\
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/RL_train_test.jpg" width="700" height="250" />
+\
+3) From more layers to accuracy: The second simple experiment wants to show what happens to the test accuracy when we add more layers to the ansatz (from 1 to 3). As we exected, the accuracy on the test set increases. This particular simple task is not present in the project, but it's mentioned within the thesis and the tables of results are appropriately shown in it.
+4) From less features to accuracy: Last experiment where I asked myself if the meaning of "less images" present in the article I cited could have been applied to features: can a QNN model reach high-levels of accuracy in the test set when the images are reduced in number of features? I downsampled each Mnist and Galaxy image from 16 to 12, 8 and 6 and I basically applied the Exp1 to see the results in generalization performance and surprisingly I've got better results also compared to the CNN!!!! 
