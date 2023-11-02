@@ -110,7 +110,7 @@ I've used Qiskit as the quantum interface combined with PyTorch and Tensorflow f
 As I said, Mnist dataset with {0,1} digits and a custom galaxy dataset reduced to 256 features are used to test the different models. I used the LBFGS optimizer furnished by PyTorch with only 20 epoches since it requires some time to end the process. Subsequently I made a simple and fair CNN constituted by only 36 optimizing parameters, 1 convolutional layer and 1 pooling to make a direct comparison between the quantum and classical part. 
 
 ### Look at the dataset
-Here you can have a look to few images of dataset
+
 <img src="https://github.com/poporubeus/The_end/blob/main/Images/galaxy_binary_NON_bianrized.jpg" width="300" height="250" /> <img src="https://github.com/poporubeus/The_end/blob/main/Images/MNIST16X16.jpg" width="400" height="300" />
 
 ### Experiments
