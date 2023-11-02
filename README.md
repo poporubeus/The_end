@@ -111,7 +111,7 @@ As I said, Mnist dataset with {0,1} digits and a custom galaxy dataset reduced t
 
 ### Look at the dataset
 
-<img src="https://github.com/poporubeus/The_end/blob/main/Images/galaxy_binary_NON_bianrized.jpg" width="300" height="250" /> <img src="https://github.com/poporubeus/The_end/blob/main/Images/MNIST16X16.jpg" width="400" height="300" />
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/galaxy_binary_NON_bianrized.jpg" width="400" height="300" /> <img src="https://github.com/poporubeus/The_end/blob/main/Images/MNIST16X16.jpg" width="400" height="300" />
 
 ### Experiments
 1) From less data to accuracy: The first experiment consists in training each QNN model with less images to see the generalization performance's trend when the train set is considerably enlarged. I have challenged the models by considering very few images like 6, 10, 20, 30, 40 and 50. I set 5 different seeds to make 5 different runs for each train set with always different and non-repeated images in each run, to have an average behaviour of each process. Unfortunaly, as I was expecting, the CNN reached the best performances on the test set rather than each QNN model which met several difficulties during training.
