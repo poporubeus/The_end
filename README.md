@@ -117,6 +117,4 @@ As I said, Mnist dataset with {0,1} digits and a custom galaxy dataset reduced t
 2) From more layers to accuracy: The second simple experiment wants to show what happens to the test accuracy when we add more layers to the ansatz (from 1 to 3). As we exected, the accuracy on the test set increases. This particular simple task is not present in the project, but it's mentioned within the thesis and the tables of results are appropriately shown in it.
 3) From less features to accuracy: Last experiment where I asked myself if the meaning of "less images" present in the article I cited could have been applied to features: can a QNN model reach high-levels of accuracy in the test set when the images are reduced in number of features? I downsampled each Mnist and Galaxy image from 16 to 12, 8 and 6 and I basically applied the Exp1 to see the results in generalization performance and surprisingly I've got better results also compared to the CNN!!!!
    
-<img src="https://github.com/poporubeus/The_end/blob/main/Images/Test_vs_number_of_features_RLRL.jpg" width="400" height="300" />
-# VS
-<img src="https://github.com/poporubeus/The_end/blob/main/Images/Test_acc_CNN_different_features_GALAXY.jpg" width="400" height="300" />
+<img src="https://github.com/poporubeus/The_end/blob/main/Images/Test_vs_number_of_features_RLRL.jpg" width="400" height="300" /> <img src="https://github.com/poporubeus/The_end/blob/main/Images/test_acc_CNN_different_features_GALAXY.jpg" width="400" height="300" />
